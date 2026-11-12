@@ -1,0 +1,12 @@
+# Archivos de video pesados
+*.mp4
+*.mkv
+*.mov
+frontend/public/videos/
+
+# Dependencias y entornos
+node_modules/
+dist/
+build/
+.env
+.env.local

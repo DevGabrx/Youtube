@@ -1,0 +1,14 @@
+# Dependencias
+node_modules/
+dist/
+build/
+
+# Archivos de video y multimedia locales pesados para que los gestione Supabase/Backend
+public/videos/
+*.mp4
+*.mkv
+*.mov
+
+# Entornos
+.env
+.env.local

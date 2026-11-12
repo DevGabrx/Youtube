@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0f0f0f;
+  --color-surface: #1f1f1f;
+  --color-line: #333333;
+  --color-ink: #f1f1f1;
+  --color-mute: #aaaaaa;
+  --color-brand: #ff0033;
+  --color-brand-soft: #ff4d6d;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  /* Asegura que los inputs y textareas se vean bien en modo oscuro */
+  input,
+  textarea {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+  }
+}
