@@ -45,7 +45,7 @@ export default function Watch() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/videos")
+    fetch("https://youtube-x5lz.onrender.com/api/videos")
       .then((res) => res.json())
       .then((data) => {
         setVideos(data);
@@ -84,7 +84,7 @@ export default function Watch() {
     if (!confirm("¿Seguro que deseas eliminar este video como administrador?"))
       return;
     try {
-      const res = await fetch(`http://localhost:3000/api/videos/${video.id}`, {
+      const res = await fetch(`https://youtube-x5lz.onrender.com/api/videos/${video.id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

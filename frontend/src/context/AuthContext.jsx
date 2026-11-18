@@ -1,5 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
+const Backend_URL = "https://youtube-x5lz.onrender.com"
+
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
@@ -11,7 +13,7 @@ export function AuthProvider({ children }) {
   const [token, setToken] = useState(() => localStorage.getItem("token") || null);
 
   const login = async (email, password) => {
-    const res = await fetch("http://localhost:3000/api/auth/login", {
+    const res = await fetch(`${Backend_URL}/api/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -28,7 +30,7 @@ export function AuthProvider({ children }) {
   };
 
   const register = async (nombre, email, password) => {
-    const res = await fetch("http://localhost:3000/api/auth/register", {
+    const res = await fetch(`${Backend_URL}/api/auth/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nombre, email, password }),

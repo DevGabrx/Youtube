@@ -12,7 +12,7 @@ export default function Comments({ videoId }) {
   // Cargar comentarios reales desde Supabase al entrar al video
   useEffect(() => {
     if (!videoId) return;
-    fetch(`http://localhost:3000/api/comments/${videoId}`)
+    fetch(`https://youtube-x5lz.onrender.com/api/comments/${videoId}`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) setComments(data);
@@ -26,7 +26,7 @@ export default function Comments({ videoId }) {
 
     setSubmitting(true);
     try {
-      const res = await fetch("http://localhost:3000/api/comments", {
+      const res = await fetch("https://youtube-x5lz.onrender.com/api/comments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

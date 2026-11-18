@@ -43,7 +43,7 @@ export default function Home() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/videos")
+    fetch("https://youtube-x5lz.onrender.com/api/videos")
       .then((res) => {
         if (!res.ok) throw new Error("Error al conectar con el servidor");
         return res.json();

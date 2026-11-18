@@ -19,7 +19,7 @@ export default function Profile() {
       return;
     }
 
-    fetch("http://localhost:3000/api/users/me", {
+    fetch("https://youtube-x5lz.onrender.com/api/users/me", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -38,7 +38,7 @@ export default function Profile() {
     setError("");
     setSaving(true);
     try {
-      const res = await fetch("http://localhost:3000/api/users/me", {
+      const res = await fetch("https://youtube-x5lz.onrender.com/api/users/me", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -61,7 +61,7 @@ export default function Profile() {
   const handleDeleteAccount = async () => {
     if (!confirm("¿Seguro que deseas eliminar tu cuenta? Esta acción no se puede deshacer.")) return;
     try {
-      const res = await fetch("http://localhost:3000/api/users/me", {
+      const res = await fetch("https://youtube-x5lz.onrender.com/api/users/me", {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
