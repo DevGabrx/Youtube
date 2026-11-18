@@ -77,7 +77,7 @@ function Header() {
             <span className="grid size-8 place-items-center rounded-lg bg-brand text-white">
               <Play width={16} height={16} />
             </span>
-            <span className="text-xl font-extrabold tracking-tight">TuVideo</span>
+            <span className="text-xl font-extrabold tracking-tight">Youtube</span>
           </Link>
 
           <form
